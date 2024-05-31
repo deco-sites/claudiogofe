@@ -16,7 +16,7 @@ export default function Section({ name = "It Works!", count = 0 }: Props) {
    * usePartialSection is a nice hook for getting the HTMX link to render this section,
    * but with the following Props
    */
-  const downLink = usePartialSection({ count: count - 1 });
+  const downLink = usePartialSection({ props: { count: count - 1 } });
   const upLink = usePartialSection({ props: { count: count + 1 } });
 
   return (
